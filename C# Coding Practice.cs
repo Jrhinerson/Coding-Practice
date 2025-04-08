@@ -44,4 +44,21 @@ public static class CodeWarsPractice
       }
       return (vertical == 0 && horizontal == 0);
     }
+
+// 04-08-25
+  // Given two integers which can be positive or negative, find the sum of all the integers between and including them and return it. 
+    public int GetSum(int a, int b)
+    {
+      if (a == b)
+        return a;
+      int Larger = Math.Max(a, b);
+      int Smaller = Math.Min(a, b);
+      int Final = 0;
+      for (int i = Smaller; i <= Larger; i++)
+      {
+        Final += i;
+      }
+      return Final;
+    }
+
 }
