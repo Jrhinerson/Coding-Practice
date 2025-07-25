@@ -65,7 +65,7 @@ public static class CodeWarsPractice
   // Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
   public static char GetGrade(int s1, int s2, int s3)
   {
-    int[] numbers = {s1, s2, s3};
+    int[] numbers = { s1, s2, s3 };
     double average = numbers.Average();
     if (average >= 90)
       return 'A';
@@ -77,5 +77,16 @@ public static class CodeWarsPractice
       return 'D';
     else
       return 'F';
+  }
+  // Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+    public static string FakeBin(string x)
+  {
+    string newString = "";
+    foreach (char letter in x)
+    {
+      int digit = letter - '0';
+      newString = digit < 5 ? newString += "0" : newString += "1";
+    }
+    return newString;
   }
 }
