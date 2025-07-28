@@ -79,7 +79,7 @@ public static class CodeWarsPractice
       return 'F';
   }
   // Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
-    public static string FakeBin(string x)
+  public static string FakeBin(string x)
   {
     string newString = "";
     foreach (char letter in x)
@@ -88,5 +88,19 @@ public static class CodeWarsPractice
       newString = digit < 5 ? newString += "0" : newString += "1";
     }
     return newString;
+  }
+
+  // 07/27/25
+  // Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+  public static int SumMix(object[] x)
+  {
+    int numberResult = 0;
+    foreach (var number in x)
+    {
+      int fixedNumber = number is string ? int.Parse((string)number) : (int)number;
+      numberResult += fixedNumber;
+    }
+    return numberResult;
   }
 }
