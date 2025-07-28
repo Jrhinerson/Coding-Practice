@@ -92,7 +92,6 @@ public static class CodeWarsPractice
 
   // 07/27/25
   // Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
-
   public static int SumMix(object[] x)
   {
     int numberResult = 0;
@@ -102,5 +101,38 @@ public static class CodeWarsPractice
       numberResult += fixedNumber;
     }
     return numberResult;
+  }
+
+  //07/28/25
+  // Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+
+  public static int Paperwork(int n, int m)
+  {
+    if (n< 0 || m < 0)
+      return 0;
+    else
+      return (n * m);
+  }
+
+  // Your task is to write a function which returns the time since midnight in milliseconds.
+
+  public static int Past(int h, int m, int s)
+  {
+    return ((h * 3600000) + (m * 60000) + (s * 1000));
+  }
+
+  // An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+  public static bool IsIsogram(string str)
+  {
+    string testWord = "";
+    foreach (char letter in str)
+    {
+      if (testWord.Contains(Char.ToLower(letter)))
+        return false;
+      else
+        testWord += Char.ToLower(letter);
+    }
+    return true;
   }
 }
